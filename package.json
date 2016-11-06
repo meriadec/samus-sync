@@ -1,5 +1,9 @@
 {
   "private": true,
+  "scripts": {
+    "setup": "pm2 deploy ecosystem.json production setup",
+    "deploy": "pm2 deploy ecosystem.json production"
+  },
   "dependencies": {
     "express": "^4.14.0",
     "is_js": "^0.9.0",
