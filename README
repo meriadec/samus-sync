@@ -1,0 +1,4 @@
+samus-sync
+
+Used by samus (https://github.com/meriadec/samus) to keep
+history synchronized across devices.

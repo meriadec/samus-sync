@@ -1,0 +1,16 @@
+{
+  "apps": [{
+    "name"  : "samus sync",
+    "script": "server.js"
+  }],
+  "deploy": {
+    "production": {
+      "user"       : "pm2",
+      "host"       : "sigsev.io",
+      "ref"        : "origin/master",
+      "repo"       : "git@github.com:meriadec/samus-sync.git",
+      "path"       : "/var/www/samus-sync",
+      "post-deploy": "npm prune && npm i && pm2 startOrRestart ecosystem.json"
+    }
+  }
+}
